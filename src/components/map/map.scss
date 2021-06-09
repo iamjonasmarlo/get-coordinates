@@ -1,0 +1,48 @@
+@import "../../assets/scss/variables.scss";
+
+.map {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    @media (max-width: $md) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        height: 50vh;
+    }
+    .map__controls {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        z-index: 500;
+        .control-button {
+            width: 45px;
+            height: 45px;
+            display: block;
+            background: $primary;
+            border: none;
+            position: relative;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: 5px;
+            svg {
+                fill: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &.disabled {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+        }
+    }
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+}

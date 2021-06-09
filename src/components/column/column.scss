@@ -1,0 +1,33 @@
+@import "../../assets/scss/variables.scss";
+
+.column {
+    padding: 0 15px;
+    &.column__full {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+    &.column__half {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+        margin-top: 30px;
+        @media (max-width: $xl) and (min-width: $md) {
+            flex: 0 0 100%;
+            width: 100%;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+        @media (max-width: $sm) {
+            flex: 0 0 100%;
+            width: 100%;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .box {
+        background: $secondary;
+        padding: 30px;
+        border-radius: 10px;
+    }
+}

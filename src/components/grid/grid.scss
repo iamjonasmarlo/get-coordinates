@@ -1,0 +1,8 @@
+@import "../../assets/scss/variables.scss";
+
+.grid-container {
+    margin: 0 -15px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 40px;
+}

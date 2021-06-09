@@ -1,0 +1,55 @@
+@import "../../assets/scss/variables.scss";
+
+.coordinate {
+    .coordinate__header {
+        color: $body-color;
+        border-bottom: solid 1px $body-color;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+    }
+    .coordinate__data {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        .data {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .copy {
+            cursor: pointer;
+            position: relative;
+            padding: 0;
+            background: transparent;
+            border: none;
+            color: $white;
+            svg {
+                display: block;
+                position: relative;
+                z-index: 10;
+                font-size: 20px;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                width: 50px;
+                height: 50px;
+                background: $body-color;
+                border-radius: 50%;
+            }
+            &:active,
+            &:focus {
+                &:before {
+                    animation-name: copy-button;
+                    animation-timing-function: ease;
+                    animation-fill-mode: forwards;
+                    animation-direction: normal;
+                    animation-duration: 0.5s;
+                }
+            }
+        }
+    }
+}
